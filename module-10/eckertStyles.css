@@ -1,0 +1,155 @@
+/* 
+Course: CSD 440: Server-Side Scripting
+Assignment: PHP Form to JSON Output
+Original Author: Wade Eckert
+Date: May 21, 2026
+Description: This stylesheet provides layout, form, validation error,
+             and formatted JSON output styling for the PHP form assignment.
+*/
+
+/* use border-box for all elements to make sizing easier */
+* {
+    box-sizing: border-box;
+}
+
+/* Reset for body to remove default margin and set a font, background color, and text color for readability */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef3f7;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* Container for the entire page to center content horizontally and provide consistent spacing */
+.page-wrapper {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+/* Card style for form and output sections to include padding, border-radius, and box-shadow for a modern look */
+.card {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+    color: #1f4e5f;
+}
+
+.intro-text {
+    margin-bottom: 24px;
+}
+
+.form-row {
+    margin-bottom: 18px;
+}
+
+/* Style for labels and form controls to ensure good spacing and readability */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* Style for form controls, adding a colored border and padding for better usability */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* 
+Focus state for form controls to improve accessibility and user experience 
+It adds a distinct outline and changes the border color to make it clear which field is active
+*/
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #7aa6b2;
+    border-color: #1f4e5f;
+}
+
+/* Style for buttons and links to make them visually distinct and consistent with the overall design */
+button,
+.button-link {
+    display: inline-block;
+    background: #1f4e5f;
+    color: #ffffff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hover state for buttons and links that change the color to a darker shade for better visual feedback */
+button:hover,
+.button-link:hover {
+    background: #173b48;
+}
+
+/* Error summary box styling to include standard red color for errors and improve readability */
+.error-summary {
+    background: #fdecea;
+    border-left: 5px solid #c0392b;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+}
+
+.error-summary h2 {
+    color: #922b21;
+    font-size: 1.2rem;
+}
+
+/* Individual field error message styling to make them easy to identify */
+.field-error {
+    display: block;
+    color: #b00020;
+    font-size: 0.92rem;
+    margin-top: 5px;
+}
+
+/* Success message box styling to include standard green color for success messages and improve readability */
+.success-box {
+    background: #eef8f1;
+    border-left: 5px solid #2e7d32;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* Styling for the JSON output to make it visually distinct and easy to read */
+pre {
+    background: #263238;
+    color: #ffffff;
+    padding: 18px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+/* Use a monospace font for the JSON output to enhance readability */
+code {
+    font-family: Consolas, Monaco, monospace;
+}
+
+/* 
+Responsive adjustments for smaller screens to ensure the form and output remain usable and visually appealing 
+Reduce padding on the card for smaller screens to maximize the available space 
+*/
+@media (max-width: 600px) {
+    .card {
+        padding: 22px;
+    }
+}
